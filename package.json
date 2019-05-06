@@ -1,0 +1,25 @@
+{
+  "name": "testpull",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --prod --extraWebpackConfig webpack.extra.js --output-hashing none --single-bundle true",
+    "test": "jest --colors",
+    "test:coverage": "jest --coverage",
+    "staging": "ng build --configuration=staging --aot --buildOptimizer",
+    "production": "ng build --prod --aot --buildOptimizer"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "roots": [
+      "./src/"
+    ],
+    "setupTestFrameworkScriptFile": "./src/setup-jest.ts",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{jsx,ts}"
+    ]
+  },
+  "private": true
+}
